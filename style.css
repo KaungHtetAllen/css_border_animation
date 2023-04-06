@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+    background-color: #0e1538;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.box1,.box2, .box3{
+    position: relative;
+    margin: 10px 0;
+    width:300px;
+    height:400px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+
+
+.box1 h2,.box2 h2, .box3 h2{
+    color:white;
+    font-size: 4rem;
+    z-index: 1;
+    animation: change 4s linear infinite;
+}
+
+@keyframes change {
+    0%{
+        color:#00ccff;
+    }
+    25%{
+        color:#d400d4;
+    }
+    75%{
+        color:#d400d4;
+    }
+    100%{
+        color:#00ccff;
+    }
+}
+
+.box1::before{
+    content: "";
+    position: absolute;
+    width:150px;
+    height:150%;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate1 5s linear infinite;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box1::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    inset:6px;
+    border-radius: 16px;
+}
+
+.box2::before{
+    content: "";
+    position: absolute;
+    width:150px;
+    height:150%;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate2 5s linear infinite;
+}
+
+@keyframes animate2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.box2::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    inset:6px;
+    border-radius: 16px;
+}
+
+.box3::before{
+    content: "";
+    position: absolute;
+    width:150px;
+    height:150%;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate1 5s linear infinite;
+}
+
+
+.box3::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    inset:6px;
+    border-radius: 16px;
+}
+
+
